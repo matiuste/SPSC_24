@@ -1,2 +1,1 @@
-# SPSC_24
-Reassessing Noise Augmentation
+# SPSC_2024
