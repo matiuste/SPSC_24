@@ -6,14 +6,21 @@ For each sample, we include the word error rate (WER) as an accuracy metric and 
 
 As outlined in our paper we investigated three types of training regimes, resulting in three different models, respectively :
 
-1: Baseline (no augmentation): This model serves as our control of the clean dataset without any form of augmentation. 
+1. **Baseline (no augmentation):** This model serves as our control of the clean dataset without any form of augmentation. 
     This baseline establishes the standard level of performance for each model under ideal acoustic conditions.
     
-2: Augmentation with speed variations: During the training of the second model temporal variability was introduced into the training data by applying speed perturbations. 
+2. **Augmentation with speed variations:** During the training of the second model temporal variability was introduced into the training data by applying speed perturbations. 
     These augmentations simulate natural variations in speech tempo, which can occur due to speaker differences or recording conditions.
     
-3: Augmentation with speed variations, background noise, and reverberation: The third model is trained with both background noises and reverberations, in addition to speed variations. 
+3. **Augmentation with speed variations, background noise, and reverberation:** The third model is trained with both background noises and reverberations, in addition to speed variations. 
     This combination aims to mimic more challenging and realistic acoustic environments that ASR systems may encounter in real-world applications.
+
+The key takeaway from the following samples is that models trained with augmentation methods tend to be more robust against adversarial attacks. This robustness is demonstrated by two main observations:
+
+- **Higher WER:** A model is considered more robust if it produces a higher WER when using the target transcription as the reference. This means that the adversarial attack is less successful in forcing the model to recognize the target transcription.
+- **Lower SNR<sub>seg</sub> values:**​ Models trained with augmentation seem to require greater noise to create effective adversarial examples.
+
+Please note that the adversarial samples are crafted per model. In the following, we report the WER and SNR<sub>seg</sub> for the adversarial sample for each model, using the seq2seq model architecture described in our paper. However, we only play the adversarial example generated with respect to model 3 (augmentation with speed variations, background noise, and reverberation).
 
 ### Experiments for the C&W attack.
 ###### Sample 1 
