@@ -1,6 +1,6 @@
 # Adversarial Example Demo
 
-Supplementary material containing a selection of benign, adversarial, and noisy data employed in our [*paper*]().
+Supplementary material containing a selection of benign, adversarial, and noisy data employed in our [*paper*](https://arxiv.org/abs/2409.01813).
 
 For each sample, we include the word error rate (WER) as an accuracy metric and the segmental signal-to-noise ratio (SNR<sub>seg</sub>) as a quality noise metric. An SNR<sub>seg</sub> exceeding 0 dB indicates a stronger signal presence compared to noise. These samples are sourced from the [*Librispeech*](https://www.openslr.org/12) corpus dataset.
 
